@@ -59,7 +59,7 @@ export default function Root() {
         <div className="p-8">
           <div className="mb-2">
             <Link to="/" className="flex items-center">
-              <img src="/assets/logo.png" alt="Grrow" className="h-10 w-auto" />
+              <img src="/assets/logo_gr.png" alt="Grrow" className="h-10 w-auto" />
             </Link>
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-1 px-1" style={{ color: '#8B9A8B' }}>
               {userType === 'student' ? '정서 관리 플랫폼' : '교육용 관리 도구'}

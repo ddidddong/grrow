@@ -30,7 +30,7 @@ export default function Login() {
               style={{ animation: 'float 6s ease-in-out infinite' }}
             />
           </div>
-          <img src="/assets/logo.png" alt="Grrow" className="h-16 w-auto mb-4" />
+          <img src="/assets/logo_gr.png" alt="Grrow" className="h-16 w-auto mb-4" />
           <p className="text-lg leading-relaxed max-w-[280px]" style={{ color: '#6B7F6B' }}>
             나만의 작은 Grrow 정원을 <br />
             말랑이와 함께 가꾸어 보아요
