@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import Login from "./pages/Login";
 import Tutorial from "./pages/Tutorial";
 import Home from "./pages/Home";
@@ -17,7 +17,7 @@ import PlaceholderActivity from "./pages/PlaceholderActivity";
 
 import TeacherHome from "./pages/TeacherHome";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/login",
     Component: Login,
