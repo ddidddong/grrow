@@ -84,7 +84,7 @@ export default function Tutorial() {
             <div className="text-center animate-fade-in">
               <div className="relative mb-10 group">
                 <div className="absolute inset-0 bg-[#6B9F7F]/20 blur-[50px] rounded-full scale-125 group-hover:scale-150 transition-all"></div>
-                <img src="/assets/character.png" alt="Mallangi" className="relative z-10 w-48 h-auto mx-auto animate-bounce-slow" />
+                <img src="/grrow/assets/character.png" alt="Mallangi" className="relative z-10 w-48 h-auto mx-auto animate-bounce-slow" />
               </div>
               <h1 className="text-4xl font-bold mb-6" style={{ color: '#3D4F3D' }}>
                 안녕! 나는 <span className="text-[#6B9F7F]">말랑이</span>야 🌱

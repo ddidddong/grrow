@@ -16,6 +16,10 @@ import SweetSong from "./pages/SweetSong";
 import PlaceholderActivity from "./pages/PlaceholderActivity";
 
 import TeacherHome from "./pages/TeacherHome";
+import TeacherStudentStatus from "./pages/TeacherStudentStatus";
+import TeacherClassDashboard from "./pages/TeacherClassDashboard";
+import TeacherSELProgram from "./pages/TeacherSELProgram";
+import PlaceholderTeacherPage from "./pages/PlaceholderTeacherPage";
 
 export const router = createHashRouter([
   {
@@ -32,6 +36,12 @@ export const router = createHashRouter([
     children: [
       { index: true, Component: Home },
       { path: "teacher", Component: TeacherHome },
+      { path: "teacher/student-status", Component: TeacherStudentStatus },
+      { path: "teacher/class-dashboard", Component: TeacherClassDashboard },
+      { path: "teacher/sel-program", Component: TeacherSELProgram },
+      { path: "teacher/ai-chat", Component: PlaceholderTeacherPage },
+      { path: "teacher/counseling", Component: PlaceholderTeacherPage },
+      { path: "teacher/screening", Component: PlaceholderTeacherPage },
       { path: "routine", Component: Routine },
       { path: "activity", Component: Activity },
       { path: "activity/siltarae", Component: Siltarae },

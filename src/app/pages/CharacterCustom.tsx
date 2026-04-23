@@ -46,7 +46,7 @@ export default function CharacterCustom() {
         {/* Cat Tree Background */}
         <div className="relative w-full aspect-square flex items-center justify-center">
             <img 
-               src="/assets/growth_tree.png" 
+               src="/grrow/assets/growth_tree.png" 
                className="absolute w-full opacity-20 filter grayscale blur-sm" 
                alt="bg"
             />
@@ -54,7 +54,7 @@ export default function CharacterCustom() {
             <div className="relative z-20 group">
                 <div className="absolute inset-0 bg-white/40 blur-[80px] rounded-full group-hover:scale-125 transition-transform"></div>
                 <img 
-                    src="/assets/character.png" 
+                    src="/grrow/assets/character.png" 
                     alt="Mallangi" 
                     className="w-64 h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] animate-bounce-slow" 
                 />

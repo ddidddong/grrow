@@ -1,4 +1,5 @@
 import { LayoutDashboard, Users, MessageSquare, Heart, GraduationCap, ClipboardCheck, BarChart3, Settings } from "lucide-react";
+import { Link } from "react-router";
 
 export default function TeacherHome() {
   const stats = [
@@ -33,7 +34,7 @@ export default function TeacherHome() {
           })}
         </div>
 
-        {/* Main Dashboard Preview */}
+         {/* Main Dashboard Preview */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <div className="bg-white rounded-[3rem] p-10 border border-[#6B9F7F]/10 shadow-sm">
              <div className="flex items-center justify-between mb-8">
@@ -41,7 +42,7 @@ export default function TeacherHome() {
                    <BarChart3 className="w-6 h-6 text-[#6B9F7F]" />
                    우리 반 정서 통계
                 </h3>
-                <button className="text-sm font-bold text-[#6B9F7F]">상세보기</button>
+                <Link to="/teacher/class-dashboard" className="text-sm font-bold text-[#6B9F7F] hover:underline">상세보기</Link>
              </div>
              <div className="h-64 bg-[#B4D4C3]/10 rounded-[2.5rem] flex items-center justify-center border-2 border-dashed border-[#B4D4C3]/30">
                 <p className="text-[#8B9A8B] font-bold">통계 데이터 로딩 중...</p>
@@ -54,7 +55,7 @@ export default function TeacherHome() {
                    <ClipboardCheck className="w-6 h-6 text-[#FFB366]" />
                    미완료 SEL 교육
                 </h3>
-                <button className="text-sm font-bold text-[#6B9F7F]">목록보기</button>
+                <Link to="/teacher/sel-program" className="text-sm font-bold text-[#6B9F7F] hover:underline">목록보기</Link>
              </div>
              <div className="space-y-4">
                 {[
