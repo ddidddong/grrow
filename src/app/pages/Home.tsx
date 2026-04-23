@@ -3,9 +3,9 @@ import { Battery, Sparkles, Target, TrendingUp, Award, Users, Star, ChevronRight
 
 export default function Home() {
   const favoriteActivities = [
-    { title: "평온의 골골송", desc: "호흡에 집중하며 마음을 안정시켜요", icon: "🧘", time: "10분", color: "#E0F2F1" },
-    { title: "마음 연못", desc: "오늘 하루를 돌아보며 생각을 정리해요", icon: "✍️", time: "15분", color: "#F3E5F5" },
-    { title: "행복 꾹꾹이", desc: "오늘 감사했던 일들을 기록해요", icon: "🙏", time: "10분", color: "#FFF3E0" },
+    { title: "평온의 골골송", desc: "호흡에 집중하며 마음을 안정시켜요", icon: "🧘", time: "10분", color: "#E0F2F1", path: "/activity/meditation" },
+    { title: "마음 연못", desc: "오늘 하루를 돌아보며 생각을 정리해요", icon: "✍️", time: "15분", color: "#F3E5F5", path: "/activity/pond" },
+    { title: "행복 꾹꾹이", desc: "오늘 감사했던 일들을 기록해요", icon: "🙏", time: "10분", color: "#FFF3E0", path: "/activity/thanks" },
   ];
 
   const todayActivities = [
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {favoriteActivities.map((act, i) => (
-                <div key={i} className="group bg-white p-6 rounded-3xl border border-[#6B9F7F]/10 hover:shadow-xl transition-all cursor-pointer">
+                <Link key={i} to={act.path} className="group bg-white p-6 rounded-3xl border border-[#6B9F7F]/10 hover:shadow-xl transition-all cursor-pointer">
                   <div className="w-14 h-14 rounded-2xl text-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110" style={{ backgroundColor: act.color }}>
                     {act.icon}
                   </div>
@@ -104,7 +104,7 @@ export default function Home() {
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
