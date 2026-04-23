@@ -62,7 +62,7 @@ export default function Root() {
               <img src="/grrow/assets/logo_gr.png" alt="Grrow" className="h-10 w-auto" />
             </Link>
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-1 px-1" style={{ color: '#8B9A8B' }}>
-              {userType === 'student' ? '정서 관리 플랫폼' : '교육용 관리 도구'}
+              한국형 사회정서교육 플랫폼 (SEL)
             </p>
           </div>
         </div>
