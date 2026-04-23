@@ -39,6 +39,12 @@ export default function MyPage() {
     { title: "나에게 칭찬 한마디", progress: 3, total: 5, status: "진행중" }
   ];
 
+  const emotionHistory = [
+    { mood: "행복함", date: "오늘", battery: 85, color: "#6B9F7F" },
+    { mood: "편안함", date: "어제", battery: 70, color: "#8FBC8F" },
+    { mood: "조금 지침", date: "2일 전", battery: 45, color: "#FFB366" },
+  ];
+
   return (
     <div className="p-8" style={{ backgroundColor: '#FFFBF5' }}>
       <div className="max-w-6xl mx-auto">
