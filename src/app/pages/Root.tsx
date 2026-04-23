@@ -19,15 +19,35 @@ export default function Root() {
   ];
 
   const teacherNavItems = [
-    { path: "/teacher", icon: LayoutDashboard, label: "Grrow Admin 홈" },
-    { path: "/tutorial", icon: GraduationCap, label: "온보딩" },
-    { path: "/teacher/sel-program", icon: ClipboardList, label: "SEL 교육 관리" },
-    { path: "/teacher/ai-chat", icon: MessageCircle, label: "AI 챗봇" },
-    { path: "/teacher/counseling", icon: Heart, label: "마음 상담 & Wee" },
-    { path: "/teacher/screening", icon: Stethoscope, label: "교사 정서 검진" },
-    { path: "/teacher/student-status", icon: UserCheck, label: "학생별 활동 현황" },
-    { path: "/teacher/class-dashboard", icon: BarChart3, label: "우리반 대시보드" },
-    { path: "/mypage", icon: Settings, label: "마이페이지 (설정)" },
+    { 
+      group: "핵심 메뉴",
+      items: [
+        { path: "/teacher", icon: LayoutDashboard, label: "Grrow Admin 홈" },
+        { path: "/tutorial", icon: GraduationCap, label: "온보딩" },
+      ]
+    },
+    { 
+      group: "SEL 교육 서비스",
+      items: [
+        { path: "/teacher/sel-program", icon: ClipboardList, label: "SEL 교육 프로그램 관리" },
+        { path: "/teacher/ai-chat", icon: MessageCircle, label: "AI 챗봇" },
+        { path: "/teacher/counseling", icon: Heart, label: "Grrow 상담 & Wee 클래스 연계" },
+        { path: "/teacher/screening", icon: Stethoscope, label: "교사 정서 검진 서비스" },
+      ]
+    },
+    { 
+      group: "내 학급 대시보드",
+      items: [
+        { path: "/teacher/student-status", icon: UserCheck, label: "학생별 활동 현황" },
+        { path: "/teacher/class-dashboard", icon: BarChart3, label: "우리반 대시보드" },
+      ]
+    },
+    { 
+      group: "설정",
+      items: [
+        { path: "/mypage", icon: Settings, label: "마이페이지 (설정)" },
+      ]
+    }
   ];
 
   const currentNavItems = userType === "student" ? studentNavItems : teacherNavItems;
@@ -37,51 +57,83 @@ export default function Root() {
       {/* Sidebar */}
       <aside className="w-72 bg-white/80 backdrop-blur-xl flex flex-col border-r border-[#6B9F7F]/10 z-20">
         <div className="p-8">
-          <div className="flex items-center gap-3 mb-2">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shadow-lg transition-colors ${userType === 'student' ? 'bg-[#6B9F7F] shadow-[#6B9F7F]/20' : 'bg-[#B4D4C3] shadow-[#B4D4C3]/20'}`}>
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-black tracking-tight" style={{ color: '#3D4F3D' }}>Grrow</h1>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: '#8B9A8B' }}>
-                {userType === 'student' ? '정서 관리 플랫폼' : '교육용 관리 도구'}
-              </p>
-            </div>
+          <div className="mb-2">
+            <Link to="/" className="flex items-center">
+              <img src="/assets/logo.png" alt="Grrow" className="h-10 w-auto" />
+            </Link>
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-1 px-1" style={{ color: '#8B9A8B' }}>
+              {userType === 'student' ? '정서 관리 플랫폼' : '교육용 관리 도구'}
+            </p>
           </div>
         </div>
 
         <nav className="flex-1 px-4 py-4 overflow-y-auto custom-scrollbar">
-          <ul className="space-y-1.5">
-            {currentNavItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.path;
+          <ul className="space-y-6">
+            {userType === 'student' ? (
+              <div className="space-y-1.5">
+                {studentNavItems.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = location.pathname === item.path;
 
-              return (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
-                      isActive
-                        ? "shadow-lg translate-x-1"
-                        : "hover:bg-[#6B9F7F]/5"
-                    }`}
-                    style={
-                      isActive
-                        ? { backgroundColor: userType === 'student' ? '#6B9F7F' : '#B4D4C3', color: '#FFFFFF', boxShadow: `0 10px 15px -3px ${userType === 'student' ? '#6B9F7F40' : '#B4D4C340'}` }
-                        : { color: '#6B7F6B' }
-                    }
-                  >
-                    <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} strokeWidth={isActive ? 2.5 : 2} />
-                    <span className={`font-bold transition-all ${isActive ? 'translate-x-1' : ''}`}>{item.label}</span>
-                    {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-white opacity-50" />}
-                  </Link>
-                </li>
-              );
-            })}
+                  return (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        className={`flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 group ${
+                          isActive
+                            ? "shadow-lg translate-x-1"
+                            : "hover:bg-[#6B9F7F]/5"
+                        }`}
+                        style={
+                          isActive
+                            ? { backgroundColor: '#6B9F7F', color: '#FFFFFF', boxShadow: '0 10px 15px -3px #6B9F7F40' }
+                            : { color: '#6B7F6B' }
+                        }
+                      >
+                        <Icon className={`w-5 h-5 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} strokeWidth={isActive ? 2.5 : 2} />
+                        <span className={`font-bold transition-all ${isActive ? 'translate-x-1' : ''}`}>{item.label}</span>
+                        {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-white opacity-50" />}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </div>
+            ) : (
+              teacherNavItems.map((group, idx) => (
+                <div key={idx} className="space-y-1">
+                   <h3 className="px-5 text-[10px] font-black text-[#8B9A8B] uppercase tracking-widest mb-2 mt-4 first:mt-0">{group.group}</h3>
+                   {group.items.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = location.pathname === item.path;
+
+                      return (
+                        <li key={item.path} className="list-none">
+                          <Link
+                            to={item.path}
+                            className={`flex items-center gap-4 px-5 py-3 rounded-2xl transition-all duration-300 group ${
+                              isActive
+                                ? "shadow-lg translate-x-1"
+                                : "hover:bg-[#B4D4C3]/10"
+                            }`}
+                            style={
+                              isActive
+                                ? { backgroundColor: '#B4D4C3', color: '#FFFFFF', boxShadow: '0 10px 15px -3px #B4D4C340' }
+                                : { color: '#6B7F6B' }
+                            }
+                          >
+                            <Icon className={`w-4 h-4 transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} />
+                            <span className={`font-bold text-sm transition-all ${isActive ? 'translate-x-1' : ''}`}>{item.label}</span>
+                          </Link>
+                        </li>
+                      );
+                   })}
+                </div>
+              ))
+            )}
             
             {/* Admin Shortcut for Student Mode */}
             {userType === 'student' && (
-              <li className="pt-4 mt-4 border-t border-[#6B9F7F]/10">
+              <li className="pt-4 mt-4 border-t border-[#6B9F7F]/10 list-none">
                 <button
                   onClick={() => setUserType('teacher')}
                   className="w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 group bg-[#6B9F7F]/5 hover:bg-[#6B9F7F]/10 text-[#6B7F6B]"
@@ -94,13 +146,13 @@ export default function Root() {
             
             {/* Student Shortcut for Teacher Mode */}
             {userType === 'teacher' && (
-              <li className="pt-4 mt-4 border-t border-[#6B9F7F]/10">
+              <li className="pt-4 mt-4 border-t border-[#6B9F7F]/10 list-none">
                 <button
                   onClick={() => setUserType('student')}
                   className="w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 group bg-[#6B9F7F]/5 hover:bg-[#6B9F7F]/10 text-[#6B7F6B]"
                 >
                   <User className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-                  <span className="font-bold text-[13px] leading-tight">학생 화면으로 돌아가기</span>
+                  <span className="font-bold text-[13px] leading-tight text-left">학생 화면으로 돌아가기</span>
                 </button>
               </li>
             )}

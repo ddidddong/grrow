@@ -3,76 +3,84 @@ import { Heart, BookOpen, Wind, Smile, PenLine, Mail, UtensilsCrossed, Dumbbell,
 export default function Activity() {
   const activities = [
     {
-      title: "걱정 비우기",
-      description: "마음속 걱정을 글로 적어 하늘로 날려보내요",
+      title: "실타래 풀기",
+      description: "엉킨 걱정 실타래를 하나씩 풀어보며 마음을 가볍게 해요",
       icon: <Heart className="w-6 h-6" />,
       color: "#FF8A8A",
       bg: "#FFF0F0",
       duration: "10분",
-      category: "내면 집중"
+      category: "내면 집중",
+      path: "/activity/siltarae"
     },
     {
-      title: "성찰 글쓰기",
-      description: "오늘 하루의 조각들을 모아 마음을 정리해요",
+      title: "Grrow 연못",
+      description: "오늘 하루의 조각들을 연못에 띄우며 마음을 정리해요",
       icon: <BookOpen className="w-6 h-6" />,
       color: "#6B9F7F",
       bg: "#F0F7F2",
       duration: "15분",
-      category: "성찰"
+      category: "성찰",
+      path: "/activity/pond"
     },
     {
-      title: "마음 챙김 명상",
-      description: "깊은 호흡과 함께 현재의 나에게 집중해요",
+      title: "평온의 골골송",
+      description: "따뜻한 고양이의 숨소리처럼 평온한 호흡에 집중해요",
       icon: <Wind className="w-6 h-6" />,
       color: "#4DB6AC",
       bg: "#E0F2F1",
       duration: "5-20분",
-      category: "내면 집중"
+      category: "내면 집중",
+      path: "/activity/meditation"
     },
     {
-      title: "감사 일기",
-      description: "일상 속 작은 행복들을 찾아 기록해봐요",
+      title: "행복 꾹꾹이",
+      description: "오늘 발견한 작은 행복들을 마음속에 꾹꾹 눌러 담아요",
       icon: <Smile className="w-6 h-6" />,
       color: "#FFB74D",
       bg: "#FFF8E1",
       duration: "10분",
-      category: "기록"
+      category: "기록",
+      path: "/activity/thanks"
     },
     {
-      title: "나에게 편지 쓰기",
-      description: "따뜻한 응원이 필요한 나에게 편지를 써요",
+      title: "유리병 편지",
+      description: "미래의 나 혹은 누군가에게 전하고픈 응원을 병에 담아요",
       icon: <Mail className="w-6 h-6" />,
       color: "#BA68C8",
       bg: "#F3E5F5",
       duration: "20분",
-      category: "기록"
+      category: "기록",
+      path: "/activity/letter"
     },
     {
-      title: "감정 일기",
-      description: "지금 내 마음이 어떤 색인지 그려보세요",
+      title: "무지개 일기",
+      description: "오늘 내 마음의 색깔들을 무지개처럼 다채롭게 기록해요",
       icon: <PenLine className="w-6 h-6" />,
       color: "#4FC3F7",
       bg: "#E1F5FE",
       duration: "15분",
-      category: "기록"
+      category: "기록",
+      path: "/activity/rainbow"
     },
     {
-      title: "마음 챙김 식사",
-      description: "한 입 한 입 맛을 느끼며 오감을 깨워요",
+      title: "Grrow 식탁",
+      description: "한 입의 맛과 향을 천천히 음미하며 오감을 깨우는 식사",
       icon: <UtensilsCrossed className="w-6 h-6" />,
       color: "#AED581",
       bg: "#F1F8E9",
       duration: "25분",
-      category: "감각"
+      category: "감각",
+      path: "/activity/eating"
     },
     {
-      title: "마음 챙김 운동",
-      description: "몸의 움직임 속에서 평온함을 찾아요",
+      title: "Grrow 피트니스",
+      description: "몸의 근육과 움직임에 집중하며 건강한 활력을 찾아요",
       icon: <Dumbbell className="w-6 h-6" />,
       color: "#90A4AE",
       bg: "#ECEFF1",
       duration: "30분",
-      category: "운동"
+      category: "운동",
+      path: "/activity/fitness"
     }
   ];
 
@@ -82,13 +90,13 @@ export default function Activity() {
         <header className="mb-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <h1 className="text-4xl font-bold mb-2" style={{ color: '#3D4F3D' }}>마음 활동 센터</h1>
+              <h1 className="text-4xl font-bold mb-2" style={{ color: '#3D4F3D' }}>Grrow 루틴</h1>
               <p className="text-lg" style={{ color: '#6B7F6B' }}>오늘 당신의 마음에 가장 필요한 활동은 무엇인가요?</p>
             </div>
             <div className="relative group">
-              <input 
-                type="text" 
-                placeholder="어떤 활동을 찾으시나요?" 
+              <input
+                type="text"
+                placeholder="어떤 활동을 찾으시나요?"
                 className="w-full md:w-80 pl-12 pr-4 py-4 rounded-2xl bg-white border border-[#6B9F7F]/10 focus:ring-2 focus:ring-[#6B9F7F]/20 focus:border-[#6B9F7F] outline-none transition-all shadow-sm"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#8B9A8B]" />
@@ -120,11 +128,12 @@ export default function Activity() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {activities.map((activity, i) => (
-            <div 
-              key={i} 
+            <Link
+              key={i}
+              to={activity.path}
               className="group bg-white rounded-[2rem] p-8 border border-[#6B9F7F]/10 hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col h-full"
             >
-              <div 
+              <div
                 className="w-16 h-16 rounded-[1.25rem] flex items-center justify-center mb-6 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110 shadow-sm"
                 style={{ backgroundColor: activity.bg, color: activity.color }}
               >
@@ -148,7 +157,7 @@ export default function Activity() {
                   <ChevronRight className="w-5 h-5" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function TeacherHome() {
              <div className="space-y-4">
                 {[
                   { title: "에피소드 4: 경청의 기적", studentCount: "12/24 완료" },
-                  { title: "오늘의 마음 글쓰기", studentCount: "18/24 완료" },
+                  { title: "오늘의 Grrow 글쓰기", studentCount: "18/24 완료" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center justify-between p-6 rounded-2xl bg-[#F9F3E8]/30">
                      <p className="font-bold text-[#3D4F3D]">{item.title}</p>

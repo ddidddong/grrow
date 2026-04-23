@@ -30,9 +30,9 @@ export default function Login() {
               style={{ animation: 'float 6s ease-in-out infinite' }}
             />
           </div>
-          <h1 className="text-4xl font-black mb-4 tracking-tight" style={{ color: '#3D4F3D' }}>마음 성장</h1>
+          <img src="/assets/logo.png" alt="Grrow" className="h-16 w-auto mb-4" />
           <p className="text-lg leading-relaxed max-w-[280px]" style={{ color: '#6B7F6B' }}>
-            나만의 작은 마음 정원을 <br />
+            나만의 작은 Grrow 정원을 <br />
             말랑이와 함께 가꾸어 보아요
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function Login() {
               {isSignup ? "환영합니다!" : "다시 만나 반가워요!"}
             </h2>
             <p style={{ color: '#6B7F6B' }}>
-              {isSignup ? "기본 정보를 입력하고 시작해볼까요?" : "로그인하여 마음 기록을 이어가세요"}
+              {isSignup ? "기본 정보를 입력하고 시작해볼까요?" : "로그인하여 Grrow 기록을 이어가세요"}
             </p>
           </div>
 

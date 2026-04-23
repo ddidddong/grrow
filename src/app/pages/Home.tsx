@@ -3,15 +3,15 @@ import { Battery, Sparkles, Target, TrendingUp, Award, Users, Star, ChevronRight
 
 export default function Home() {
   const favoriteActivities = [
-    { title: "명상", desc: "호흡에 집중하며 마음을 안정시켜요", icon: "🧘", time: "10분", color: "#E0F2F1" },
-    { title: "성찰 글쓰기", desc: "오늘 하루를 돌아보며 생각을 정리해요", icon: "✍️", time: "15분", color: "#F3E5F5" },
-    { title: "감사 일기", desc: "오늘 감사했던 일들을 기록해요", icon: "🙏", time: "10분", color: "#FFF3E0" },
+    { title: "평온의 골골송", desc: "호흡에 집중하며 마음을 안정시켜요", icon: "🧘", time: "10분", color: "#E0F2F1" },
+    { title: "마음 연못", desc: "오늘 하루를 돌아보며 생각을 정리해요", icon: "✍️", time: "15분", color: "#F3E5F5" },
+    { title: "행복 꾹꾹이", desc: "오늘 감사했던 일들을 기록해요", icon: "🙏", time: "10분", color: "#FFF3E0" },
   ];
 
   const todayActivities = [
-    { title: "감정 체크인", completed: true, type: "정서" },
-    { title: "걱정 비우기", completed: true, type: "Grrow 루틴" },
-    { title: "사회정서교육 에피소드 1", completed: false, type: "학습" },
+    { title: "무지개 일기", completed: true, type: "정서" },
+    { title: "실타래 풀기", completed: true, type: "Grrow 루틴" },
+    { title: "Grrow 에피소드 1", completed: false, type: "학습" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Home() {
           <div className="flex-1 z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B4D4C3]/30 text-[#4A634A] text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
-              오늘의 마음 지수 상위 10%
+              오늘의 Grrow 지수 상위 10%
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: '#3D4F3D' }}>
               안녕하세요 서영님, <br />
@@ -155,10 +155,10 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "나에게 편지 쓰기", tag: "위로", bg: "bg-orange-50" },
-              { title: "걱정 바로알기", tag: "인지", bg: "bg-blue-50" },
-              { title: "마음 챙김 식사", tag: "감각", bg: "bg-green-50" },
-              { title: "기분 좋게 걷기", tag: "운동", bg: "bg-purple-50" },
+              { title: "유리병 편지", tag: "위로", bg: "bg-orange-50" },
+              { title: "실타래 풀기", tag: "인지", bg: "bg-blue-50" },
+              { title: "마음 식탁", tag: "감각", bg: "bg-green-50" },
+              { title: "마음 피트니스", tag: "운동", bg: "bg-purple-50" },
             ].map((rec, i) => (
               <div key={i} className={`p-6 rounded-3xl border border-[#6B9F7F]/10 hover:shadow-lg transition-all cursor-pointer ${rec.bg}`}>
                 <span className="text-[10px] font-bold uppercase tracking-wider bg-white px-2 py-1 rounded-lg mb-4 inline-block shadow-sm" style={{ color: '#6B9F7F' }}>

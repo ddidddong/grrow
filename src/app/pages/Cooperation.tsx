@@ -4,8 +4,8 @@ import { Link } from "react-router";
 export default function Cooperation() {
   const features = [
     {
-      title: "AI 감정 단어 도감",
-      description: "성찰 글에서 추출된 감정 어휘를 수집하며 정서 문해력을 키우는 도감 시스템입니다.",
+      title: "감정 책갈피",
+      description: "너의 성찰 글에서 반짝이는 감정 단어들을 모아 책갈피로 만들어보자.",
       icon: Book,
       color: "#6B9F7F",
       bg: "#E8F5E9",
@@ -13,8 +13,8 @@ export default function Cooperation() {
       status: "32개 수집됨"
     },
     {
-      title: "캐릭터 가꾸기",
-      description: "학생의 활동량(글쓰기, 미션 완료)에 따라 획득한 포인트로 캐릭터의 성장과 공간 꾸미기로 지속적인 참여 동기를 부여합니다.",
+      title: "단짝 냥이 키우기",
+      description: "너의 성장을 먹고 자라는 단짝 냥이! 활동 포인트로 냥이의 공간을 예쁘게 꾸며줘.",
       icon: Sparkles,
       color: "#FFB366",
       bg: "#FFF3E0",
@@ -23,17 +23,17 @@ export default function Cooperation() {
       link: "/cooperation/character"
     },
     {
-      title: "협력 퀘스트",
-      description: "학급/학교 단위의 공동 미션을 수행하며 소통과 협력 역량을 실천적으로 기릅니다.",
+      title: "우리 반 캣타워",
+      description: "친구들과 힘을 합쳐 거대한 캣타워(학급 퀘스트)를 완성하고 협동 역량을 키워봐!",
       icon: Users,
       color: "#8FBC8F",
       bg: "#F1F8F4",
       tag: "소통·협력",
-      status: "학급 퀘스트 진행 중"
+      status: "퀘스트 진행 중"
     },
     {
-      title: "응원 릴레이",
-      description: "익명 기반의 긍정 피드백을 주고받으며 건강한 또래 관계와 정서적 안전망을 형성합니다.",
+      title: "핑크 젤리 응원",
+      description: "친구에게 따스한 핑크 젤리 응원 메시지를 보내 건강한 정서 안전망을 만들어보자.",
       icon: MessageSquareHeart,
       color: "#FF9999",
       bg: "#FFE8E8",
@@ -41,8 +41,8 @@ export default function Cooperation() {
       status: "새 응원 5건"
     },
     {
-      title: "AI 마음친구",
-      description: "누구에게도 말하지 못한 고민을 털어놓고, AI 챗봇의 누적 데이터 및 진단 결과 기반 정서적 지지와 공감 및 AI 리프레이밍 치유 받는 서비스입니다.",
+      title: "대나무 숲",
+      description: "누구에게도 말하지 못한 고민을 털어놓고, AI 챗봇의 누적 데이터 및 진단 결과 기반 정서적 지지와 공감을 받아보세요.",
       icon: MessageCircleCode,
       color: "#8FAADC",
       bg: "#EBF0FA",
@@ -55,7 +55,7 @@ export default function Cooperation() {
     <div className="p-8 min-h-screen" style={{ backgroundColor: '#FFFBF5' }}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-2 shadow-sm inline-block" style={{ color: '#3D4F3D' }}>마음 협동</h1>
+          <h1 className="text-4xl font-bold mb-2 shadow-sm inline-block" style={{ color: '#3D4F3D' }}>Grrow 플레이</h1>
           <p className="text-lg" style={{ color: '#6B7F6B' }}>함께 성장하고 마음을 나누는 우리들의 공간</p>
         </div>
 

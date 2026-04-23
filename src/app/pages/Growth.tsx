@@ -35,7 +35,7 @@ export default function Growth() {
     },
     {
       icon: Heart,
-      title: "마음 돌봄",
+      title: "Grrow 돌봄",
       description: "나와 타인의 마음을 돌봐요",
       color: "#FFB366",
       bg: "#FFF3E0",
@@ -54,8 +54,8 @@ export default function Growth() {
     { session: 2, title: "나의 강점 보물 상자 찾기", competency: "자기인식", tag: "자기 긍정", completed: true },
     { session: 3, title: "친구가 속상할 때 어떻게 할까?", competency: "소통·협력", tag: "공감", completed: true },
     { session: 4, title: "우리 반 약속, 나부터 실천해요", competency: "책임", tag: "규칙 준수", completed: false },
-    { session: 5, title: "화가 나는 마음 달래기", competency: "마음 돌봄", tag: "정서 조절", completed: false },
-    { session: 6, title: "미래의 나에게 응원 편지 쓰기", competency: "마음 돌봄", tag: "자기 격려", completed: false },
+    { session: 5, title: "화가 나는 마음 달래기", competency: "Grrow 돌봄", tag: "정서 조절", completed: false },
+    { session: 6, title: "미래의 나에게 응원 편지 쓰기", competency: "Grrow 돌봄", tag: "자기 격려", completed: false },
   ];
 
   const recentLessons = curriculum.filter(c => c.completed).slice(-2);
@@ -65,7 +65,7 @@ export default function Growth() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <h1 className="text-4xl font-bold mb-2" style={{ color: '#3D4F3D' }}>마음 성장</h1>
+            <h1 className="text-4xl font-black mb-2" style={{ color: '#3D4F3D' }}>Grrow 클래스</h1>
             <p className="text-lg" style={{ color: '#6B7F6B' }}>2022 개정 교육과정 기반 사회정서학습(SEL) 프로그램</p>
           </div>
           
