@@ -5,7 +5,7 @@ export default function TeacherStudentStatus() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const students = [
-    { id: 1, name: "김서영", mood: "맑음", moodEmoji: "☀️", lastActivity: "에피소드 4 완료", status: "stable", score: 85 },
+    { id: 1, name: "이정서", mood: "맑음", moodEmoji: "☀️", lastActivity: "에피소드 4 완료", status: "stable", score: 85 },
     { id: 2, name: "이민우", mood: "흐림", moodEmoji: "☁️", lastActivity: "마음연못 일기 작성", status: "warning", score: 42 },
     { id: 3, name: "박지성", mood: "비", moodEmoji: "🌧️", lastActivity: "감정 실타래 풀기 중", status: "danger", score: 28 },
     { id: 4, name: "최유진", mood: "맑음", moodEmoji: "☀️", lastActivity: "에피소드 4 완료", status: "stable", score: 92 },

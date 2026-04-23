@@ -53,7 +53,7 @@ export default function MyPage() {
               <img src="/grrow/assets/character.png" alt="Mallangi" className="w-full h-full object-cover" />
             </div>
             <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-1" style={{ color: '#3D4F3D' }}>김서영</h2>
+              <h2 className="text-2xl font-bold mb-1" style={{ color: '#3D4F3D' }}>이정서</h2>
               <p style={{ color: '#6B7F6B' }}>학생 · 가입일: 2026.03.08</p>
               <div className="flex gap-2 mt-3">
                 <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: '#B4D4C3', color: '#3D4F3D' }}>

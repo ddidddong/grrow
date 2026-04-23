@@ -175,7 +175,7 @@ export default function Root() {
                  </div>
                  <div className="text-left">
                     <p className="text-xs font-black text-[#3D4F3D]">현재 접속 중</p>
-                    <p className="text-sm font-bold text-[#6B9F7F]">{userType === 'student' ? '김서영 학생' : '이마음 선생님'}</p>
+                    <p className="text-sm font-bold text-[#6B9F7F]">{userType === 'student' ? '이정서 학생' : '이마음 선생님'}</p>
                  </div>
               </div>
               <ArrowLeftRight className="w-4 h-4 text-[#8B9A8B] group-hover:rotate-180 transition-transform duration-500" />

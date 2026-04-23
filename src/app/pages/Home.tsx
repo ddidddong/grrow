@@ -25,7 +25,7 @@ export default function Home() {
               오늘의 Grrow 지수 상위 10%
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: '#3D4F3D' }}>
-              안녕하세요 서영님, <br />
+              안녕하세요 정서님, <br />
               <span style={{ color: '#6B9F7F' }}>평온한 하루</span> 되세요! 👋
             </h1>
             <p className="text-lg mb-8 leading-relaxed" style={{ color: '#6B7F6B' }}>
