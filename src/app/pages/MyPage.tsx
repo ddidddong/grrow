@@ -50,7 +50,7 @@ export default function MyPage() {
         <div className="bg-white rounded-2xl p-6 shadow-sm mb-8" style={{ border: '1px solid rgba(107, 159, 127, 0.15)' }}>
           <div className="flex items-center gap-6">
             <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-white bg-white">
-              <img src="/assets/character.png" alt="Mallangi" className="w-full h-full object-cover" />
+              <img src="assets/character.png" alt="Mallangi" className="w-full h-full object-cover" />
             </div>
             <div className="flex-1">
               <h2 className="text-2xl font-bold mb-1" style={{ color: '#3D4F3D' }}>김서영</h2>

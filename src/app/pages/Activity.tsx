@@ -1,4 +1,5 @@
 import { Heart, BookOpen, Wind, Smile, PenLine, Mail, UtensilsCrossed, Dumbbell, ChevronRight, Sparkles, Clock, Search } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Activity() {
   const activities = [

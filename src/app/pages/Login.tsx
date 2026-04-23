@@ -24,13 +24,13 @@ export default function Login() {
           <div className="mb-10 relative">
             <div className="absolute inset-0 bg-[#6B9F7F]/20 blur-[60px] rounded-full scale-150"></div>
             <img 
-              src="/assets/character.png" 
+              src="assets/character.png" 
               alt="Mind Buddy" 
               className="relative z-10 w-64 h-auto drop-shadow-2xl animate-float"
               style={{ animation: 'float 6s ease-in-out infinite' }}
             />
           </div>
-          <img src="/assets/logo_gr.png" alt="Grrow" className="h-16 w-auto mb-4" />
+          <img src="assets/logo_gr.png" alt="Grrow" className="h-16 w-auto mb-4" />
           <p className="text-lg leading-relaxed max-w-[280px]" style={{ color: '#6B7F6B' }}>
             나만의 작은 Grrow 정원을 <br />
             말랑이와 함께 가꾸어 보아요

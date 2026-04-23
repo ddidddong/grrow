@@ -44,7 +44,7 @@ export default function Home() {
           <div className="relative w-full max-w-[400px]">
             <div className="absolute inset-0 bg-[#6B9F7F]/10 blur-[100px] rounded-full"></div>
             <img 
-              src="/assets/character.png" 
+              src="assets/character.png" 
               alt="Mind Buddy" 
               className="relative z-10 w-full h-auto drop-shadow-2xl animate-bounce-slow"
               style={{ animation: 'bounce-slow 3s ease-in-out infinite' }}
